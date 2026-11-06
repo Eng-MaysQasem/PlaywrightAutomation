@@ -14,14 +14,15 @@ import { defineConfig, devices } from '@playwright/test';
  */
 const Config=({
   testDir: './tests',
-  timeout:40000,
+  timeout:30000,
   expect:{
-      timeout:40000,
+      timeout:5000,
   },
  
   reporter: 'html',
       use: {
-        browserName: 'chromium'
+        browserName: 'firefox',
+        headless:false,
     },
  });
 
