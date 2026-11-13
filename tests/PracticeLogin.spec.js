@@ -12,4 +12,8 @@ await login.click();
 console.log(await login.inputValue());
 const item=page.locator('.card-body b');
 console.log(await item.nth(0).textContent());
+await item.first().waitFor();
+const titles = await item.allTextContents();
+console.log(titles);
+
 });
